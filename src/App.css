@@ -1,38 +1,258 @@
-.App {
-  text-align: center;
+img {
+	filter: invert(65%) sepia(21%) saturate(172%) hue-rotate(135deg)
+		brightness(88%) contrast(87%);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+	display: inline-block;
+	color: #5f8385;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+	color: #fff;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+	font-weight: normal;
+	text-decoration: none;
+	outline: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
-
-.App-link {
-  color: #61dafb;
+ol,
+ul {
+	list-style: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+del {
+	text-decoration: line-through;
+}
+body {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color: #000;
+	overflow-x: hidden;
+	min-width: 320px;
+	font-weight: 500;
+}
+input,
+textarea,
+select {
+	font-family: "GT-Eesti", Arial, Helvetica, sans-serif;
+	font-weight: 500;
+}
+a {
+	color: #000;
+	display: inline-block;
+}
+.thumb {
+	display: block;
+}
+.thumb img {
+	display: block;
+	width: 100%;
+}
+p {
+	line-height: 1.6em;
+	font-family: "GT-Eesti", Arial;
+	color: #777;
+	font-size: 15px;
+}
+.hidden {
+	display: none;
+}
+br.clear {
+	clear: both;
+	line-height: 0;
+}
+.wrapper {
+	width: 90%;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+.flex-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
+::placeholder {
+	color: #9b9b9b;
+}
+:-ms-input-placeholder {
+	color: #9b9b9b;
+}
+::-ms-input-placeholder {
+	color: #9b9b9b;
+}
+a {
+	transition-duration: 400ms;
+}
+#calculator {
+	background: hsl(185, 41%, 84%);
+	padding: 58px;
+}
+h1 {
+	font-size: 20px;
+	text-align: center;
+	color: #5f8385;
+	text-transform: uppercase;
+	margin-bottom: 30px;
+	letter-spacing: 0.9vw;
+}
+#calc {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	margin: 0 auto;
+	background: #fff;
+	padding: 30px;
+	border-radius: 10px;
+}
+#calc div.left {
+	width: 50%;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+#calc div.left span {
+	display: inline-block;
+	text-transform: capitalize;
+	color: #88999a;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+#calc div.left span.bill {
+	margin-top: 0;
+}
+#calc div.left span.tips {
+	margin-top: 15px;
+}
+#calc div.left form {
+	border: 2px solid #54c6b8;
+	background: #bddee3;
+	border-radius: 4px;
+	padding: 10px;
+	display: flex;
+}
+#calc div.left form input {
+	text-align: right;
+	width: 100%;
+	font-size: 16px;
+	font-weight: 600;
+	color: #00474b;
+}
+div.left div.tips a {
+	display: inline-block;
+	padding: 12px 18px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	font-size: 16px;
+	font-weight: 600;
+	background: #00474b;
+	border: 2px solid #00474b;
+	color: #fff;
+	border-radius: 4px;
+}
+div.left div.tips a:hover {
+	background: #bddee3;
+	color: #00474b;
+	border: 2px solid #54c6b8;
+}
+div.left div.tips input.custom-tip {
+	width: 30%;
+	text-align: right;
+	display: inline-block;
+	padding: 12px 18px;
+	margin-bottom: 10px;
+	font-size: 16px;
+	font-weight: 600;
+	border: 2px solid #54c6b8;
+	background: #bddee3;
+	color: #00474b;
+	border-radius: 4px;
+}
+#calc div.right {
+	width: 50%;
+	padding: 20px;
+	box-sizing: border-box;
+	background: #00474b;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#calc div.right div.top {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+#calc div.right div.top span {
+	display: block;
+	font-size: 20px;
+	text-transform: capitalize;
+	color: #fff;
+	margin-bottom: 5px;
+}
+#calc div.right div.top small {
+	display: block;
+	font-size: 14px;
+	color: #88999a;
+}
+#calc div.right div.top input {
+	width: 20%;
+	text-align-last: left;
+	font-size: 20px;
+	color: #fff;
+}
+#calc div.right a.button {
+	display: block;
+	text-align: center;
+	text-transform: capitalize;
+	padding: 12px 18px;
+	font-size: 16px;
+	font-weight: 600;
+	background: #bddee3;
+	border: 2px solid #54c6b8;
+	color: #00474b;
+	border-radius: 4px;
+}
+@media all and (max-width: 1080px) {
+	#calc {
+		width: 70%;
+	}
+}
+@media all and (max-width: 980px) {
+	#calc {
+		width: 75%;
+	}
+}
+@media all and (max-width: 768px) {
+	#calc {
+		width: 90%;
+	}
+}
+@media all and (max-width: 640px) {
+	#calculator {
+		padding: 10px;
+	}
+	#calc {
+		width: 100%;
+		padding: 10px;
+	}
+	#calc div.right {
+		width: 100%;
+	}
+	#calc div.left {
+		width: 100%;
+		margin-bottom: 36px;
+	}
+	div.left div.tips input.custom-tip {
+		width: 50%;
+	}
+	h2 {
+		width: 100%;
+		margin-top: 25px;
+	}
 }
